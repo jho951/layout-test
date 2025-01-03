@@ -1,0 +1,8 @@
+#header {
+  width: 100%;
+  height: var(--header-height);
+  max-width: calc(100vw - var(--padding));
+  position: fixed;
+  margin: auto;
+  inset: 0% 0% auto;
+}

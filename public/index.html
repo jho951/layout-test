@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>CSS LAYOUT</title>
-    <meta name="description" content="recap CSS"/>
-    <!-- 'public' 폴더의 URL로 대체됩니다. -->
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!-- manifest.json 웹 앱을 설치할 때 사용되는 메타데이터를 제공합니다. -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      브라우저에서 직접 열면 빈 페이지가 표시됩니다.
-      이 파일에 웹 글꼴, 메타 태그 또는 분석을 추가할 수 있습니다.
-      빌드 단계에서는 번들 스크립트를 <body> 태그에 배치합니다.
-    -->
-  </body>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS Knowledge</title>
+        <meta name="description" content="summary about CSS"/>
+        <!-- 'public' 폴더의 URL로 대체됩니다. -->
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <!-- manifest.json 웹 앱을 설치할 때 사용되는 메타데이터를 제공합니다. -->
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <meta name="author" content="이장호">
+
+        <!-- Canonical -->
+        <link rel="canonical" href="[##_blog_link_##]" />
+        <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+
+
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="./index.css"/>
+        <link rel="stylesheet" href="./reset.css"/>
+
+        <!-- Scripts -->
+        <script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>
+        <script src="//t1.daumcdn.net/tistory_admin/assets/skin/common/vh-check.min.js"></script>
+        <script src="./images/common.js" defer></script>
+
+        <!-- JSON-LD -->
+        <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "name": "CSS Layout",
+        "description": "CSS 정리프로젝트입니다.",
+        "url": "localhost:3000",
+        "image": logo192
+        }
+        </script>
+    </head>
+    <body >
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+    </body>
 </html>
