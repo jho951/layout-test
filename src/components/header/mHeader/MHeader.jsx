@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../logo/Logo";
-import logo from "public/logo.svg"
 import Drawer from "../../drawer/Drawer";
 import "./MHeader.css";
 
@@ -17,7 +16,7 @@ export default function MHeader() {
     <React.Fragment>
       <div class='mobile-header-wrap'>
         <Link to='/' aria-current='page'>
-          <Logo logo={logo} />
+          <Logo logo={process.env.PUBLIC_URL + "/logo.svg"} />
           <h1 class='logo-title hide'>CSS Layout</h1>
         </Link>
         <section class={`drawer ${openDrawer}`} onClick={onClickDrawer}>
