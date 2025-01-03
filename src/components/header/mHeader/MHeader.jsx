@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../logo/Logo";
-import logo from "../../../logo.svg";
+import logo from "public/logo.svg"
 import Drawer from "../../drawer/Drawer";
 import "./MHeader.css";
 
