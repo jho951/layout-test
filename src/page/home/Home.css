@@ -1,1 +1,19 @@
+.home {
+  width: 100%;
+  min-height: 1000px;
+}
+.cc1 {
+  background-color: red;
+}
 
+.cc2 {
+  background-color: blue;
+}
+
+.cc3 {
+  background-color: green;
+}
+
+.cc4 {
+  background-color: yellow;
+}

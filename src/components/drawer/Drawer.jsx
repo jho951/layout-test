@@ -3,7 +3,10 @@ import "./Drawer.css";
 import { Link } from "react-router-dom";
 
 const Drawer = ({ isOpen }) => {
-  const Gnb = [{ id: 0, title: "widthunit", href: "/widthunit" }];
+  const Gnb = [
+    { id: 0, title: "widthunit", href: "/widthunit" },
+    { id: 1, title: "position", href: "/position" },
+  ];
   return (
     <nav class={`drawer-wrap ${isOpen}`}>
       <ul className={`m-gnb-wrap ${isOpen}`}>

@@ -48,10 +48,10 @@
   --background-primary: var(--color-brand-brown);
   --background-secondary: var(--color-brand-beige);
   --background-tertiary: var(--color-brand-red);
-  --background-success: var(color-brand-green);
-  --background-warning: var(color-brand-yellow);
+  --background-success: var(--color-brand-green);
+  --background-warning: var(--color-brand-yellow);
   --background-alternate: var(--color-brand-white);
-  --background-error: var(color-brand-red);
+  --background-error: var(--color-brand-red);
 
   --text-primary: var(--color-brand-black);
   --text-secondary: var(--color-brand-neutral-darker);
@@ -108,7 +108,7 @@ body {
   text-align: center;
   background: var(--background-primary);
   padding: 20px 0;
-  z-index: 10000;
+  z-index: 1000;
   visibility: hidden;
 }
 #skip a {
@@ -140,7 +140,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
   margin: 0;
   transition: 0.5s ease-in;
 }

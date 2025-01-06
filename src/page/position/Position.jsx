@@ -1,7 +1,7 @@
 import React from "react";
 import "./Position.css";
 
-const Position = () => {
+export default function Position() {
   return (
     <div className='display'>
       {/* position */}
@@ -51,6 +51,4 @@ const Position = () => {
       </section>
     </div>
   );
-};
-
-export default Position;
+}
