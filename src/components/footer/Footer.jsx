@@ -7,14 +7,13 @@ export default function Footer() {
     <footer id='footer'>
       <div class='footer-wrap'>
         <h2>
-          <span>Subscribe to my</span>
-          <span>latest posts and</span>
-          <span>updates</span>
+          <span>Visit to my</span>
+          <span>posts</span>
         </h2>
         <nav class='sub-btn'>
           <Link
             class='btn_menu_toolbar btn_subscription'
-            href='https://develop-enchantment.tistory.com/'
+            to='https://develop-enchantment.tistory.com/'
             data-device='web_pc'>
             SUBSCRIBE
           </Link>
@@ -32,7 +31,7 @@ export default function Footer() {
         </svg>
         <Link
           class='git-icon'
-          href='https://www.github.com/jho951'
+          to='https://www.github.com/jho951'
           target='_blank'>
           <svg
             xmlns='http://www.w3.org/2000/svg'

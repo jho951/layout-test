@@ -1,11 +1,9 @@
 #footer {
-  width: 100vw;
   display: flex;
   position: sticky;
   bottom: 0;
-  background-color: var(--text-primary);
   background-color: var(--de-green);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
+  box-shadow: 0px 10px 20px rgba(var(--text-primary), 0.3),
     inset 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
