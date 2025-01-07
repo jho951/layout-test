@@ -16,7 +16,7 @@ export default function MHeader() {
     <React.Fragment>
       <div class='mobile-header-wrap'>
         <Link to='/' aria-current='page'>
-          <Logo logo={process.env.PUBLIC_URL + "/logo.svg"} />
+          <Logo logo={process.env.PUBLIC_URL + "/logo.svg"} size='50' />
           <h1 class='logo-title hide'>CSS Layout</h1>
         </Link>
         <section class={`drawer ${openDrawer}`} onClick={onClickDrawer}>
