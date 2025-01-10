@@ -1,11 +1,16 @@
+:root {
+  --text: var(--text-alternate);
+  --bacground: var(--de-green);
+  --shadow: 0px 10px 20px rgba(var(--text-primary), 0.3),
+    inset 0px 5px 15px rgba(var(--text-primary), 0.2);
+}
+
 #footer {
-  display: flex;
   position: sticky;
   bottom: 0;
-  color: var(--text-alternate);
-  background-color: var(--de-green);
-  box-shadow: 0px 10px 20px rgba(var(--text-primary), 0.3),
-    inset 0px 5px 15px rgba(var(--text-primary), 0.2);
+  color: var(--text);
+  background-color: var(--bacground);
+  box-shadow: var(--shadow);
 }
 
 .footer-wrap {
@@ -15,8 +20,6 @@
   flex-direction: column;
   flex-wrap: nowrap;
   margin: 0 auto;
-}
-
-.sub-btn {
-  font-size: clamp(30px, 2.5vw, 50px);
+  padding: var(--padding) 0;
+  gap: 10px;
 }

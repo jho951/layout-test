@@ -1,0 +1,36 @@
+:root {
+  --wrap-height: 2.8rem;
+  --text-size: 2rem;
+  --text-color: #ffffff;
+  --wrap-background-color: #000000;
+  --box-shadow-color: rgba(var(--wrap-background-color), 0.3);
+  --box-shadow-offset: 0 4px;
+  --box-shadow-blur: 10px;
+}
+
+.skip-link {
+  width: 100%;
+  height: var(--wrap-height);
+  position: absolute;
+  top: -100px;
+  font-size: var(--text-size);
+  color: var(--text-color);
+  text-align: center;
+  font-weight: bold;
+  outline: none;
+  text-decoration: none;
+  background-color: var(--wrap-background-color);
+  transition: top 0.5s ease, transform 0.5s ease;
+  box-shadow: var(--box-shadow-offset) var(--box-shadow-blur)
+    var(--box-shadow-color);
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+  transform: translateY(0);
+}
+
+.skip-link:not(:focus) {
+  transform: translateY(-var(--wrap-height));
+}

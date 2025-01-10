@@ -69,9 +69,15 @@
   --border-alternate: var(--color-brand-neutral-darker);
 
   --header-height: 150px;
+  --line-height: 1.8;
   --padding: 5%;
   --radius: 8px;
   --space: 30px;
+  --font-size: 1.6rem;
+}
+
+html {
+  font-size: 10px;
 }
 
 html,
@@ -86,10 +92,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   color: var(--de-black);
-  letter-spacing: -1px;
-  font-family: Besansdiatype, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -99,25 +103,6 @@ body {
 .inherit-color * {
   color: inherit;
   text-decoration: none;
-}
-
-#skip {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  text-align: center;
-  background: var(--background-primary);
-  padding: 20px 0;
-  z-index: 1000;
-  visibility: hidden;
-}
-#skip a {
-  color: var(--text-alternate);
-  font-size: 30px;
-  line-height: 40px;
-}
-#skip a:focus {
-  visibility: visible;
 }
 
 #space {

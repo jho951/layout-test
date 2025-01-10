@@ -5,6 +5,7 @@ import Home from "./page/home/Home";
 import WidthUnit from "./page/widthUnit/WidthUnit";
 import Position from "./page/position/Position";
 import reportWebVitals from "./reportWebVitals";
+import Login from "./page/login/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +15,7 @@ root.render(
         <Route path='/' element={<Home />} />
         <Route path='/widthunit' element={<WidthUnit />} />
         <Route path='/position' element={<Position />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

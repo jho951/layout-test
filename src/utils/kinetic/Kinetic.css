@@ -1,0 +1,24 @@
+.kinetic-letter {
+  font-size: clamp(20px, 2.5vw, 30px);
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 1s forwards, slideUp 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
