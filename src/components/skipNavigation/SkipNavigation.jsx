@@ -1,15 +1,13 @@
 import React from "react";
 import "./SkipNavigation.css";
 
-const SkipNavigation = ({ targetId }) => {
+export default function SkipNavigation({ targetId }) {
   return (
     <a
-      href={`#${targetId}`}
       className='skip-link'
+      href={`#${targetId}`}
       aria-label={`Skip to ${targetId}`}>
       {targetId}
     </a>
   );
-};
-
-export default SkipNavigation;
+}
