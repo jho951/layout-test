@@ -1,16 +1,18 @@
 :root {
-  --text: var(--text-alternate);
-  --bacground: var(--de-green);
-  --shadow: 0px 10px 20px rgba(var(--text-primary), 0.3),
-    inset 0px 5px 15px rgba(var(--text-primary), 0.2);
+  --text: #ffffff;
+  --footer-bacground: #01242d;
+  --footer-shadow: 0px 10px 20px rgba(#18181b, 0.3),
+    inset 0px 5px 15px rgba(#18181b;, 0.2);
+  --z-index: 100;
 }
 
 #footer {
   position: sticky;
   bottom: 0;
   color: var(--text);
-  background-color: var(--bacground);
-  box-shadow: var(--shadow);
+  background-color: var(--footer-bacground);
+  box-shadow: var(--footer-shadow);
+  z-index: var(--z-index);
 }
 
 .footer-wrap {

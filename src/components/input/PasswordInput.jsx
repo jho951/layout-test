@@ -25,9 +25,14 @@ import Icon from "../../utils/icon/Icon";
  * @param {*} ref : inputRef, buttonRef
  */
 
-export const TextInput = forwardRef(({ ...props }, ref) => {
+export const PasswordInput = forwardRef(({ ...props }, ref) => {
+  const [isView, setIsView] = useState(false);
   const [isFocus, setIsFocus] = useState("");
   const inputRef = useRef(null);
+
+  const isTypeChange = () => {
+    setIsView((prevState) => !prevState);
+  };
 
   const onFocus = () => {
     if (!props.readOnly) {
@@ -35,6 +40,7 @@ export const TextInput = forwardRef(({ ...props }, ref) => {
       inputRef.current.focus();
     }
   };
+
   const onBlur = () => {
     setIsFocus("");
     inputRef.current.blur();
@@ -65,7 +71,7 @@ export const TextInput = forwardRef(({ ...props }, ref) => {
   return (
     <div className={inputClass}>
       <input
-        type='text'
+        type={isView ? "text" : "password"}
         {...props}
         onFocus={onFocus}
         onBlur={onBlur}
@@ -76,14 +82,30 @@ export const TextInput = forwardRef(({ ...props }, ref) => {
         ref={inputRef}
       />
       {!props.disabled && props.value && (
-        <button
-          className='input-close-btn'
-          onClick={clear}
-          aria-label='delete-value-button'
-          aria-disabled={props.disabled}>
-          <Icon icon='close' size='24' color='#BCBCBC' />
-          <span className='hide'>삭제</span>
-        </button>
+        <div className='input-btn-wrap'>
+          <button
+            className='input-close-btn'
+            onClick={isTypeChange}
+            aria-label='view-password-button'
+            aria-disabled={props.disabled}>
+            <Icon
+              icon={isView ? "eyeVisibleOff" : "eyeVisible"}
+              size='24'
+              color='#666'
+            />
+            <span className='hide'>
+              {isView ? "비밀번호 표시 안함" : "선택 안 됨,비밀번호 표시"}
+            </span>
+          </button>
+          <button
+            className='input-close-btn'
+            onClick={clear}
+            aria-label='close-button'
+            aria-disabled={props.disabled}>
+            <Icon icon='close' size='24' color='#BCBCBC' />
+            <span className='hide'>삭제</span>
+          </button>
+        </div>
       )}
     </div>
   );

@@ -1,60 +1,81 @@
 :root {
+  --wrap-border: #000000;
   --wrap-background: transparent;
-  --padding: 1.3rem 0.7rem;
+  --padding: 1rem 0.5rem;
+  --wrap-radius: 0.5rem;
+  --font-size: 1.6rem;
+  --placeholder-color: #bcbdbc;
+  --focus-border: #4996ca;
+  --disabled-border: #9e9e9e;
+  --disabled-background: #9e9e9e;
+}
+
+input {
+  width: 100%;
+  display: inline;
+  border: none;
+  outline: none;
+  padding: var(--padding);
+  background-color: transparent;
+}
+input::placeholder {
+  color: var(--placeholder-color);
+}
+input:-moz-placeholder {
+  background-color: transparent !important;
+}
+input::-webkit-autofill {
+  background-color: transparent !important;
+}
+input[autocomplete="on"] {
+  background-color: transparent !important;
+}
+input:-webkit-autofill {
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .input-wrap {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid transparent;
-  border-radius: 0.5rem;
-  background-color: var(--wrap-background);
-  padding: var(--padding);
-  font-size: 1.4rem;
-  transition: all 0.3s ease;
   position: relative;
+  border: 1px solid var(--wrap-border);
+  border-radius: var(--wrap-radius);
+  background-color: var(--wrap-background);
+  font-size: var(--font-size);
+  transition: all 0.5s ease;
 }
 
-input {
+.input-wrap.fullWidth {
   width: 100%;
-  height: 100%;
+}
+.input-wrap.focus {
+  border: 1px solid var(--focus-border);
+}
 
-  display: inline;
+.input-wrap.disabled {
+  border: 1px solid var(--disabled-border);
+  background-color: var(--disabled-background);
+}
+
+.input-wrap :disabled {
+  color: var(--color_sub_disabled);
+  cursor: not-allowed;
+}
+
+.input-btn-wrap {
+  display: flex;
+  gap: 10px;
+}
+.input-close-btn {
   border: none;
-  outline: none;
   background-color: transparent;
-}
-
-.disabled {
-  background-color: var(--color_disabled);
-  color: var(--color_sub_disabled);
-
-  cursor: not-allowed;
-}
-
-.primary {
-  border: 1px solid var(--color_sub_theme);
-}
-
-.warn {
-  border: 1px solid var(--color_warn);
-}
-
-.input ::placeholder {
-  color: #bcbdbc;
-}
-
-.input:disabled {
-  color: var(--color_sub_disabled);
-
-  cursor: not-allowed;
 }
 
 .icon {
   width: 2rem;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: baseline;

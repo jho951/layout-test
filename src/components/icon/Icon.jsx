@@ -22,7 +22,7 @@ const Icon = ({ icon, color, width, height }) => {
 
   return (
     <span style={iconStyle}>
-      <i className={styles.svg} />
+      <i className='svg' />
     </span>
   );
 };

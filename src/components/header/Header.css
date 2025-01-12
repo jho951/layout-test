@@ -1,9 +1,12 @@
+:root {
+  --padding: 5%;
+}
+
 #header {
   width: 100%;
-  height: var(--header-height);
   max-width: calc(100vw - var(--padding));
   position: fixed;
-  margin: auto;
+  margin: 0 auto;
   inset: 0% 0% auto;
-  z-index: 111;
+  z-index: calc(var(--z-index) + 10);
 }

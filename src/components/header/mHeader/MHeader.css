@@ -1,58 +1,69 @@
+:root {
+  --header-height: 15rem;
+  --menu-btn-radius: 8px;
+  --menu-btn-padding: 8px;
+  --menu-background: rgba(0, 0, 0, 0.2);
+  --menu-btn-size: 1rem;
+  --menu-btn-border: #ffffff;
+  --menu-btn-background: #18181b;
+  --menu-btn-background-open: #01242d;
+  --z-index: 105;
+}
+
 .mobile-header-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   visibility: visible;
+  padding: 1rem;
 }
 
-.drawer {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
-
-  padding: var(--radius);
+.menu-btn {
+  border: none;
+  background-color: var(--menu-background);
+  border-radius: var(--menu-btn-radius);
+  padding: var(--menu-btn-radius);
   transition: background-color 0.3s ease;
-  z-index: 110;
   cursor: pointer;
+  z-index: var(--z-index);
 }
 
-.drawer.true {
+.menu-btn.true {
   background-color: transparent;
 }
 
-.drawer-btn {
-  width: 20px;
-  height: 20px;
-
+.menu-btn-wrap {
+  width: var(--menu-btn-size);
+  height: var(--menu-btn-size);
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-
   position: relative;
+  border: 1px solid var(--menu-btn-border);
+  border-color: var(--menu-btn-border);
+  border-radius: var(--menu-btn-radius);
 
-  border: 1px solid var(--color-brand-white);
-  border-color: var(--color-brand-white);
-  border-radius: var(--radius);
+  color: var(--menu-btn-border);
+  background-color: rgba(var(--menu-btn-background), 0);
+  box-shadow: 0 4px 6px rgba(var(--menu-btn-background), 0.1);
 
-  color: var(--color-brand-white);
-  background-color: rgba(var(--color-brand-black), 0);
-  box-shadow: 0 4px 6px rgba(var(--color-brand-black), 0.1);
-
-  padding: 10px;
+  padding: var(--menu-btn-padding);
   text-decoration: none;
   overflow: hidden;
   outline: none;
 }
 
-.drawer-btn.true {
-  background-color: var(--de-green);
-  border-color: var(--de-green);
+.menu-btn-wrap.true {
+  background-color: var(--menu-btn-background-open);
+  border: 1px solid var(--menu-btn-background-open);
 }
 
-.drawer-btn svg {
+.menu-btn-wrap svg {
   transition: transform 0.3s ease-in-out;
 }
-.drawer-btn.true svg {
+
+.menu-btn-wrap.true svg {
   transform: rotate(45deg);
 }
 
@@ -65,5 +76,5 @@
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
     rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
-  color: var(--text-alternate);
+  color: var(--menu-btn-border);
 }

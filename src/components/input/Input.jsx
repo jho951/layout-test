@@ -1,13 +1,17 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { TextInput } from "./TextInput";
+import { PasswordInput } from "./PasswordInput";
+import "./Input.css";
 
-export default function Input({ type }) {
-  // 구조 분해 할당
+const Input = forwardRef(({ type, ...props }, ref) => {
   switch (type) {
-    case "text": {
-      return <TextInput />;
-    }
+    case "text":
+      return <TextInput ref={ref} {...props} />;
+    case "password":
+      return <PasswordInput ref={ref} {...props} />;
     default:
-      return <input />;
+      return <input ref={ref} {...props} />;
   }
-}
+});
+
+export default Input;

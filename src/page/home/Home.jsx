@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import SkipNavigation from "../../components/skipNavigation/SkipNavigation";
 import Layout from "../../components/layout/Layout";
 import "./Home.css";
@@ -10,15 +10,6 @@ const SKIP_NAVIGATION_ID = [
 ];
 
 export default function Home() {
-  const mainContentRef = useRef(null);
-
-  // 페이지 로드 시 주요 콘텐츠로 포커스 이동
-  useEffect(() => {
-    if (mainContentRef.current) {
-      mainContentRef.current.focus();
-    }
-  }, []);
-
   return (
     <>
       {SKIP_NAVIGATION_ID.map((item) => (
