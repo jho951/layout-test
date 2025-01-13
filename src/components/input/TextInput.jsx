@@ -26,8 +26,8 @@ import Icon from "../../utils/icon/Icon";
  */
 
 export const TextInput = forwardRef(({ ...props }, ref) => {
-  const [isFocus, setIsFocus] = useState("");
   const inputRef = useRef(null);
+  const [isFocus, setIsFocus] = useState("");
 
   const onFocus = () => {
     if (!props.readOnly) {

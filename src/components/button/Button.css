@@ -1,0 +1,8 @@
+.button-wrap {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.icon {
+  background-color: transparent;
+}

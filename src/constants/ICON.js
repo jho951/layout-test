@@ -36,4 +36,8 @@ export const ICONS = {
         <circle cx="10" cy="20" r="2" />
         <circle cx="18" cy="20" r="2" />
     </svg>`,
+  plus: (color) =>
+    `<svg xmlns='http://www.w3.org/2000/svg' width="14" height="14" viewBox='0 0 13 13' fill='none'>
+        <path fill="#${color}" fill-rule='evenodd' clip-rule='evenodd' d='M8.59567 6.09631V7.09631H12.5958V6.09631H8.59567ZM7.09575 8.59612L6.09575 8.59612L6.09575 12.5962L7.09575 12.5962L7.09575 8.59612ZM7.09575 0.596203L7.09575 4.59612L6.09575 4.59612L6.09575 0.596203L7.09575 0.596203ZM4.59567 6.09631L0.595756 6.09631L0.595756 7.09631L4.59567 7.09631L4.59567 6.09631Z' />
+    </svg>`,
 };

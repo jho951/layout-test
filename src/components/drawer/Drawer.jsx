@@ -11,10 +11,3 @@ const Drawer = ({ isOpen }) => {
 };
 
 export default Drawer;
-
-//  switch (type) {
-//    case "gnb":
-//      return
-//    default:
-//      return;
-//  }

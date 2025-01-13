@@ -1,7 +1,7 @@
 :root {
   --font-size: 2.4rem;
   --text: #ffffff;
-  --drawer-background: linear-gradient(135deg, #7b5334, #3f2618);
+  --drawer-wrap-background: linear-gradient(135deg, #7b5334, #3f2618);
   --list-gap: 2rem;
   --padding-top: 5rem;
   --padding-left: 4rem;
@@ -14,7 +14,7 @@
   top: 0;
   left: 0;
   color: var(--text);
-  background: var(--drawer-background);
+  background: var(--drawer-wrap-background);
   padding-top: var(--padding-top);
   padding-left: var(--padding-left);
   opacity: 0;
